@@ -1,1 +1,20 @@
-{"name":"Rozana — Hindi Daily Inspiration","short_name":"Rozana","description":"Roz ek nayi soch, ek naya ehsaas.","start_url":"./","display":"standalone","background_color":"#11100f","theme_color":"#11100f","lang":"hi"}
+{
+  "id": "./",
+  "name": "RozAna — हर दिन एक नई बात",
+  "short_name": "RozAna",
+  "description": "हिंदी शायरी, प्रेरणा, तथ्य और ज्ञान का रोज़ाना फ़ीड।",
+  "start_url": "./?source=android-app",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "background_color": "#11100f",
+  "theme_color": "#11100f",
+  "lang": "hi",
+  "categories": ["lifestyle", "education"],
+  "icons": [
+    { "src": "icons/rozana-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/rozana-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/rozana-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

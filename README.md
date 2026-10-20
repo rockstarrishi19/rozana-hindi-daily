@@ -1,6 +1,6 @@
 # Rozana
 
-A responsive Hindi daily inspiration feed. It rotates the first featured card by local date, with one-card-at-a-time scrolling, category filters, likes and saved items in local storage, native share/copy, JPEG downloads, and installable PWA support.
+A responsive Hindi daily inspiration feed and installable Android PWA. It rotates the first featured card by local date, with one-card-at-a-time scrolling, category filters, likes and saved items in local storage, native share/copy, and JPEG downloads.
 
 ## Run locally
 
@@ -17,6 +17,10 @@ Then visit `http://localhost:8000`.
 The site is published on GitHub Pages from the `gh-pages` branch. Its public URL is https://rockstarrishi19.github.io/rozana-hindi-daily/.
 
 For a daily update, edit the `entries` list in `app.js`, then run `./publish.sh`. It saves the edit on `main` and updates the published `gh-pages` branch. The service worker checks the network first and uses its saved copy when offline, so published edits can reach returning visitors without changing a cache number each day. News cards should be refreshed with dated, linked sources before each daily publication.
+
+## Install on Android
+
+Open the website in Chrome on Android, tap **Android ऐप इंस्टॉल करें**, then confirm **Install**. If Chrome has not offered the install prompt yet, use its menu (⋮) and choose **Install app** or **Add to Home screen**. The installed app opens RozAna in a standalone window and keeps the website's saved feed available offline after it has loaded once.
 
 ## Add content
 

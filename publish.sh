@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-git add README.md app.js index.html manifest.json style.css sw.js publish.sh
+git add README.md app.js index.html manifest.json style.css sw.js publish.sh icons/
 if ! git diff --cached --quiet; then
   git commit -m "Update RozAna daily content"
 fi
@@ -17,6 +17,8 @@ trap cleanup EXIT
 
 git worktree add --detach "$publish_dir" origin/gh-pages
 cp index.html app.js style.css sw.js manifest.json "$publish_dir/"
+mkdir -p "$publish_dir/icons"
+cp icons/*.png "$publish_dir/icons/"
 touch "$publish_dir/.nojekyll"
 git -C "$publish_dir" add -A
 if ! git -C "$publish_dir" diff --cached --quiet; then
