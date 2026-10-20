@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#11100f" />
+  <meta name="description" content="Roz ek nayi soch, ek naya ehsaas. Hindi quotes, shayari, facts aur knowledge." />
+  <title>Rozana — हर दिन एक नई बात</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=undo2" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="RozAna home"><span class="brand-mark">R</span><span>RozAna<span class="brand-dot">.</span><small>हर दिन एक नई बात</small></span></a>
+      <nav class="top-links" aria-label="Main navigation"><a class="active" href="#home">आज का फ़ीड</a><a href="#categories">खोजें</a><a href="#about">हमारे बारे में</a></nav>
+      <button class="profile" aria-label="Profile"><span>ऋ</span><b>ऋषि महेन्द्रा</b><i>⌄</i></button>
+    </header>
+
+    <main id="home">
+      <section class="intro">
+        <div><p class="eyebrow"><span class="live-dot"></span> आज की ख़ास बात <span class="intro-date" id="today-date"></span></p><h1>रुकिए ज़रा.<br /><em>कुछ अच्छा पढ़िए।</em></h1><p class="creator-byline">✦ एक ख़ास प्रस्तुति <strong>ऋषि महेन्द्रा</strong></p></div>
+        <p class="intro-note">एक स्क्रॉल, एक नई सोच।<br />आपके दिन के लिए कुछ ख़ास। <span>✳</span></p>
+      </section>
+
+      <div class="feed-layout">
+        <aside class="side-rail"><p class="rail-label">आपकी दुनिया</p><div id="side-categories"></div><div class="rail-bottom"><div class="mini-spark">✳</div><b>हर दिन थोड़ा बेहतर।</b><small>एक अच्छी बात,<br />आपके नाम।</small></div></aside>
+
+        <section class="feed-column" aria-label="Daily inspiration feed">
+          <div class="feed-toolbar"><div class="filter-chips" id="categories"></div><div class="feed-count"><span class="count-now">01</span><span class="count-slash">/</span><span class="count-total">16</span><span class="count-label">आज के पल</span></div></div>
+          <div class="scroll-hint"><span>↓</span> अगली बात के लिए स्क्रॉल करें</div>
+          <div class="cards" id="cards" tabindex="0" aria-label="Scroll through daily cards"></div>
+        </section>
+
+        <aside class="right-rail"><div class="streak-card"><div class="streak-top"><span>✦</span><span>आपका सिलसिला</span></div><div class="streak-number">07 <small>दिन</small></div><p>सात दिनों से आप<br />ख़ुद के लिए रुक रहे हैं।</p><div class="week-dots"><i>मं</i><i>बु</i><i>गु</i><i>शु</i><i>श</i><i>रवि</i><i class="today">आज</i></div></div><div class="note-card"><span class="note-icon">☼</span><p>आज की छोटी-सी याद</p><b>आप जितना सोचते हैं, उससे कहीं ज़्यादा कर सकते हैं।</b><span class="note-line"></span><small>अपने पास रखिए ↗</small></div><div class="creator-credit"><span>✳</span><p>एक ख़ास कोना</p><b>ऋषि महेन्द्रा</b><small>भाव-शिल्पी · विचार-संग्राहक</small></div></aside>
+      </div>
+    </main>
+    <footer id="about"><span>✳ रोज़ाना</span><span>शब्द जो आपके साथ चलें।</span><span>कल्पना और संकलन <b>ऋषि महेन्द्रा</b></span></footer>
+    <div class="toast" id="toast" role="status"></div>
+  </div>
+  <script src="app.js?v=undo2"></script>
+</body>
+</html>
