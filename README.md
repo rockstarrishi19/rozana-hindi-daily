@@ -14,9 +14,9 @@ Then visit `http://localhost:8000`.
 
 ## Publish and update
 
-The site is prepared for GitHub Pages. After signing in to GitHub on the publishing machine, create a GitHub repository for this folder, push the `main` branch, and set the repository's Pages source to **GitHub Actions**. The workflow in `.github/workflows/pages.yml` publishes the site on every push to `main` and on manual runs. The public URL will appear in the repository's **Settings → Pages** after the first successful run.
+The site is published on GitHub Pages from the `gh-pages` branch. Its public URL is https://rockstarrishi19.github.io/rozana-hindi-daily/.
 
-For a daily update, edit the `entries` list in `app.js`, then commit and push to `main`; GitHub Actions will redeploy it. The service worker now checks the network first and uses its saved copy when offline, so published edits can reach returning visitors without changing a cache number each day. News cards should be refreshed with dated, linked sources before each daily publication.
+For a daily update, edit the `entries` list in `app.js`, then run `./publish.sh`. It saves the edit on `main` and updates the published `gh-pages` branch. The service worker checks the network first and uses its saved copy when offline, so published edits can reach returning visitors without changing a cache number each day. News cards should be refreshed with dated, linked sources before each daily publication.
 
 ## Add content
 
