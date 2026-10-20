@@ -22,6 +22,10 @@ For a daily update, edit the `entries` list in `app.js`, then run `./publish.sh`
 
 Open the website in Chrome on Android, tap **Android ऐप इंस्टॉल करें**, then confirm **Install**. If Chrome has not offered the install prompt yet, use its menu (⋮) and choose **Install app** or **Add to Home screen**. The installed app opens RozAna in a standalone window and keeps the website's saved feed available offline after it has loaded once.
 
+## Build the Android APK
+
+The native Android wrapper loads the published RozAna website and uses a launcher icon featuring **ऋ**. Quote JPEG downloads are saved under `Pictures/RozAna`. Build an installable debug APK from GitHub Actions using the **Build Android APK** workflow, then download its `RozAna-Android-APK` artifact. The APK is signed with Android's debug key for direct installation; a Play Store release needs a separate release signing setup.
+
 ## Add content
 
 Edit the `entries` array at the top of `app.js`. Each item uses `category`, `icon`, `label`, `text`, `sub`, `by`, and `type`; trending or factual items can also include `sourceUrl` and `sourceLabel` to show a source link. The 12 categories are Motivation, Shayari, Facts, Psychology, Daily Knowledge, Lessons from Books, Relationships, Words of Calm, Habits & Discipline, Riddle, Word of the Day, and Life Lessons (shown with Hindi and English labels in the app). Cards download as JPEG images.
