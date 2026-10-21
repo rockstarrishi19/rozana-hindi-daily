@@ -1,4 +1,4 @@
-name: Build Android APK
+name: Build Android App Bundle
 
 on:
   workflow_dispatch:
@@ -17,17 +17,28 @@ jobs:
           java-version: '17'
       - uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: '8.9'
+          gradle-version: '9.3.1'
       - uses: android-actions/setup-android@v3
         with:
           packages: platform-tools
       - name: Install Android SDK packages
-        run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
-      - name: Build installable debug APK
-        run: gradle --no-daemon -p android assembleDebug
+        run: sdkmanager "platforms;android-36" "build-tools;36.0.0"
+      - name: Prepare Play upload key
+        env:
+          ROZANA_UPLOAD_KEY_B64: ${{ secrets.ROZANA_UPLOAD_KEY_B64 }}
+          ROZANA_UPLOAD_KEY_PASSWORD: ${{ secrets.ROZANA_UPLOAD_KEY_PASSWORD }}
+        run: |
+          test -n "$ROZANA_UPLOAD_KEY_B64"
+          test -n "$ROZANA_UPLOAD_KEY_PASSWORD"
+          echo "$ROZANA_UPLOAD_KEY_B64" | base64 --decode > android/upload-key.p12
+          chmod 600 android/upload-key.p12
+      - name: Build Play release bundle
+        env:
+          ROZANA_UPLOAD_KEY_PASSWORD: ${{ secrets.ROZANA_UPLOAD_KEY_PASSWORD }}
+        run: gradle --no-daemon -p android bundleRelease
       - uses: actions/upload-artifact@v4
         with:
-          name: RozAna-Android-APK
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+          name: RozAna-Play-Release-AAB
+          path: android/app/build/outputs/bundle/release/app-release.aab
           if-no-files-found: error
           retention-days: 30
