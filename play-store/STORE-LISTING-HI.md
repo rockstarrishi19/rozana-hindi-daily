@@ -7,6 +7,7 @@
 - **App or game:** App
 - **Category suggestion:** Lifestyle
 - **Developer display name:** Rishi Mahendra
+- **Support email:** Rockstar.rishi19@gmail.com
 - **Package name:** `com.rishimahendra.rozana`
 - **Icon:** `assets/RozAna-Play-Icon-512.png`
 - **Feature graphic:** `assets/RozAna-Feature-Graphic-1024x500.png`
@@ -53,7 +54,6 @@ The app does not request account, contacts, location, or payment data. Likes/sav
 
 ## Still required from the publisher
 
-- A support email address for the store listing.
 - Confirmation of the developer-account type and completion of identity verification.
-- Final real-device screenshots and review of every content source/licence.
+- Final real-device screenshots and review of every content source/licence. Capture the final app running on a phone; do not use mockups.
 - Content rating questionnaire, target audience, ads declaration, app access, and Data safety form in Play Console.
